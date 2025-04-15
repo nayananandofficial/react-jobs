@@ -26,7 +26,7 @@ A fully responsive job board built with React.js, Tailwind CSS, and Express. Thi
 
 ## 🌐 Live Demo
 
-👉 [Visit Live App]([https://react-jobs-client-1.onrender.com])
+👉 [Visit Live App](https://react-jobs-frontend.onrender.com)
 
 ## ⚙️ Getting Started
 
@@ -60,11 +60,11 @@ http://localhost:5173
 ```
 
 ### 5. Backend (If separate)
-[Check react-jobs-server repository]([https://github.com/nayananandofficial/react-jobs-server])
+[Check react-jobs-server repository](https://github.com/nayananandofficial/react-jobs-server)
 
 
 📬 Contact
 Made with 💙 by Nayan Anand
-🔗 [GitHub]([https://github.com/nayananandofficial])
+🔗 [GitHub](https://github.com/nayananandofficial)
 
 If you liked this project, feel free to ⭐ the repo or reach out for collaboration!
