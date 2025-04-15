@@ -14,10 +14,13 @@ import EditJobPage from "./pages/EditJobPage";
 import axios from "axios";
 
 const App = () => {
+  // API URL from environment variable
+  const apiUrl = process.env.REACT_APP_API_UR;
+
   //Add Job Page
   const addJob = async (newJob) => {
     try {
-      await axios.post("/api/jobs", newJob);
+      await axios.post(`${apiUrl}/api/jobs`, newJob);
     } catch (error) {
       console.error("Error adding job:", error);
     }
@@ -26,7 +29,7 @@ const App = () => {
   // Delete Job
   const deleteJob = async (id) => {
     try {
-      await axios.delete(`/api/jobs/${id}`);
+      await axios.delete(`${apiUrl}/api/jobs/${id}`);
     } catch (error) {
       console.error("Error deleting job:", error);
     }
@@ -35,7 +38,7 @@ const App = () => {
   // Update Job
   const updateJob = async (job) => {
     try {
-      await axios.put(`/api/jobs/${job.id}`, job);
+      await axios.put(`${apiUrl}/api/jobs/${job.id}`, job);
     } catch (error) {
       console.error("Error updating job:", error);
     }
