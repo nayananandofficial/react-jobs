@@ -15,7 +15,7 @@ import axios from "axios";
 
 const App = () => {
   // API URL from environment variable
-  const apiUrl = process.env.REACT_APP_API_UR;
+  const apiUrl = import.meta.env.REACT_APP_API_URL;
 
   //Add Job Page
   const addJob = async (newJob) => {
