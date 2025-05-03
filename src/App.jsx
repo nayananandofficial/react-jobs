@@ -15,12 +15,12 @@ import axios from "axios";
 
 const App = () => {
   // API URL from environment variable
-  const apiUrl = import.meta.env.REACT_APP_API_URL;
+  const apiUrl = '/api';
 
   //Add Job Page
   const addJob = async (newJob) => {
     try {
-      await axios.post(`${apiUrl}/api/jobs`, newJob);
+      await axios.post(`${apiUrl}/jobs`, newJob);
     } catch (error) {
       console.error("Error adding job:", error);
     }
@@ -29,7 +29,7 @@ const App = () => {
   // Delete Job
   const deleteJob = async (id) => {
     try {
-      await axios.delete(`${apiUrl}/api/jobs/${id}`);
+      await axios.delete(`${apiUrl}/jobs/${id}`);
     } catch (error) {
       console.error("Error deleting job:", error);
     }
@@ -38,7 +38,7 @@ const App = () => {
   // Update Job
   const updateJob = async (job) => {
     try {
-      await axios.put(`${apiUrl}/api/jobs/${job.id}`, job);
+      await axios.put(`${apiUrl}/jobs/${job.id}`, job);
     } catch (error) {
       console.error("Error updating job:", error);
     }
