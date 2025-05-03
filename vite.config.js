@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: `${import.meta.env.REACT_APP_API_URL}/api`,
+        target: 'https://react-jobs-server-1.onrender.com/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
