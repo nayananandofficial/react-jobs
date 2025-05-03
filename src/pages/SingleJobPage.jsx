@@ -109,7 +109,7 @@ const SingleJobPage = ({ deleteJob }) => {
 };
 
 const jobLoader = async ({ params }) => {
-  const res = await axios.get(`/api/jobs/${params.id}`);
+  const res = await axios.get(`${import.meta.env.REACT_APP_API_URL}/api/jobs/${params.id}`);
   const data = res.data;
   return data;
 };
