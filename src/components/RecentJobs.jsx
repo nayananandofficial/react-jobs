@@ -10,7 +10,7 @@ const RecentJobs = ({ isHome = false }) => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const apiUrl = `${import.meta.env.REACT_APP_API_URL}/api/jobs` // Always fetch all jobs
+        const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/jobs` // Always fetch all jobs
         console.log(REACT_APP_API_URL);
         const res = await axios.get(apiUrl);
         console.log(res.data);
