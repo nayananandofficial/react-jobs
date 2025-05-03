@@ -11,7 +11,7 @@ const RecentJobs = ({ isHome = false }) => {
     const fetchJobs = async () => {
       try {
         const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/jobs` // Always fetch all jobs
-        console.log(REACT_APP_API_URL);
+        console.log(VITE_API_BASE_URL);
         const res = await axios.get(apiUrl);
         console.log(res.data);
         let data = Array.isArray(res.data) ? res.data : []; // Ensure data is an array
