@@ -11,11 +11,11 @@ const RecentJobs = ({ isHome = false }) => {
     const fetchJobs = async () => {
       try {
         const apiUrl = '/api/jobs'; // Always fetch all jobs
-        console.log(apiUrl);
+        // console.log(apiUrl);
         const res = await axios.get(apiUrl);
         console.log(res.data);
-        let data = res.data; // Assuming jobs are returned directly
-        
+        let data = Array.isArray(res.data) ? res.data : []; // Ensure data is an array
+        //  let data = res.data;
         
 
         // If isHome is true, limit the results to the first 3 jobs
